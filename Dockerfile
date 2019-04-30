@@ -1,4 +1,4 @@
-FROM inmbzp7148.in.dst.ibm.com:5000/ubuntu:69
+FROM inmbzp5170.in.dst.ibm.com:5000/ubuntu:69
 MAINTAINER "Ghanshyam <gsaini05@in.ibm.com>"
 USER root
 
