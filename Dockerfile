@@ -34,8 +34,8 @@ RUN set -x \
   #	&& wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)" \
   #	&& wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc" \
 
-        && wget -O /usr/local/bin/gosu http://inmbzp7148.in.dst.ibm.com:8081/repository/installables/gosu-amd64 \
-        && wget -O /usr/local/bin/gosu.asc http://inmbzp7148.in.dst.ibm.com:8081/repository/installables/gosu-amd64.asc \
+        && wget -O /usr/local/bin/gosu http://inmbzp5170.in.dst.ibm.com:8081/repository/installables/gosu-amd64 \
+        && wget -O /usr/local/bin/gosu.asc http://inmbzp5170.in.dst.ibm.com:8081/repository/installables/gosu-amd64.asc \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
 	&& gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu \
@@ -49,8 +49,8 @@ RUN set -x \
   #	&& wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini" \
   #	&& wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/$TINI_VERSION/tini.asc" \
         
-        && wget -O /usr/local/bin/tini http://inmbzp7148.in.dst.ibm.com:8081/repository/installables/tini \
-        && wget -O /tmp/tini.asc.tar.gz http://inmbzp7148.in.dst.ibm.com:8081/repository/installables/tini.asc.tar.gz \
+        && wget -O /usr/local/bin/tini http://inmbzp5170.in.dst.ibm.com:8081/repository/installables/tini \
+        && wget -O /tmp/tini.asc.tar.gz http://inmbzp5170.in.dst.ibm.com:8081/repository/installables/tini.asc.tar.gz \
         && tar -zxvf /tmp/tini.asc.tar.gz -C /usr/local/bin/ \
 	&& export GNUPGHOME="$(mktemp -d)" \
 	&& gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 6380DC428747F6C393FEACA59A84159D7001A4E5 \
